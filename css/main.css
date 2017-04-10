@@ -1,0 +1,178 @@
+html{
+    box-sizing: border-box;
+    font-size: 16px;
+    line-height: 1.4;
+}
+ *:before, *:after{
+    box-sizing: inherit;
+}
+
+ body{
+     background-color: #f2f2f2;
+     font-family: Candara;
+ }
+
+h1.nombre-sitio{
+    font-family: "Palatino Linotype";
+    font-size:  7vw;
+    text-transform: uppercase;
+}
+
+ /**clearfix**/
+
+.clearfix:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+.clearfix {
+    display: inline-block;
+}
+.clearfix {
+    display: block;
+}
+
+ /** cabecera **/
+
+div.hero{
+    background-image: url(../imagenes/merida-de-noche.jpg);
+    height: 80vh;
+
+    background-position: top center;
+    background-size: cover;
+}
+div.contenido-header{
+    padding-top: 40px;
+}
+
+@media only screen and (min-width:768px) {
+    div.contenido-header{
+        padding-top: 10px;
+    }
+}
+nav.redes-sociales{
+    text-align: center;
+}
+nav.redes-sociales a{
+    margin-right: 20px;
+}
+
+nav.redes-sociales a:last-child{
+    margin-right: 0px;
+}
+div.informacion-evento{
+    text-align: center;
+    color: #ffffff;
+}
+
+@media only screen and (min-width:768px) {
+    div.informacion-evento{
+        width:70%;
+        margin: 0 auto;
+        margin-top: 50px;
+    }
+}
+div.informacion-evento p{
+    margin-left: 0px;
+    display: inline;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+p.fecha{
+    float: left;
+}
+
+p.lugar{
+    float: right;
+}
+
+p.slogan{
+    text-transform: none !important;
+    font-size: 30px !important;
+}
+
+p.slogan span{
+    font-weight: bold;
+}
+
+@media only screen and (min-width:768px) {
+    h1.nombre-sitio{
+        margin: 0px;
+    }
+}
+
+/**Barra**/
+.contenedor{
+    width: 95%;
+    margin: 0 auto;
+}
+
+@media only screen and(min-width: 480px){
+    .contenedor{
+        width: 95%;
+    }
+}
+
+@media only screen and(min-width: 768px){
+    .contenedor{
+        width: 90%;
+    }
+}
+@media only screen and(min-width: 992px){
+    .contenedor{
+        width: 90%;
+    }
+}
+
+div.barra{
+    background-color: #353535;
+    padding: 20px 0;
+}
+
+div.logo{
+    width:80%
+}
+div.logo img{
+    width: 100%;
+}
+@media only screen and(min-width: 768px){
+    div.logo{
+        width: 33%;
+        float: left;
+    }
+}
+
+nav.navegacion-principal{
+    display: none;
+    display: block;
+}
+
+nav.navegacion-principal a{
+    font-family: "Lucida Sans Unicode";
+    color: #ffffff;
+    font-size: 1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 50px 40px!important;
+}
+
+nav.navegacion-principal a:hover{
+    background-color: #fe4918;
+}
+
+@media only screen and(min-width: 768px){
+    nav.navegacion-principal{
+        width: 67%;
+        float: right;
+        text-align: right;
+        display: block;
+    }
+    nav.navegacion-principal a{
+        margin-right: 10px;
+        padding: 50px 40px!important;
+        display: inline-block;
+    }
+}
