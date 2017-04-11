@@ -60,7 +60,7 @@ nav.redes-sociales a{
 }
 
 nav.redes-sociales a:last-child{
-    margin-right: 0px;
+    margin-right: 0;
 }
 div.informacion-evento{
     text-align: center;
@@ -75,7 +75,7 @@ div.informacion-evento{
     }
 }
 div.informacion-evento p{
-    margin-left: 0px;
+    margin-left: 0;
     display: inline;
     font-size: 20px;
     text-transform: uppercase;
@@ -100,13 +100,13 @@ p.slogan span{
 
 @media only screen and (min-width:768px) {
     h1.nombre-sitio{
-        margin: 0px;
+        margin: 0;
     }
 }
 
-/**Barra**/
+/**barra**/
 .contenedor{
-    width: 95%;
+    width: 98%;
     margin: 0 auto;
 }
 
@@ -124,6 +124,7 @@ p.slogan span{
 @media only screen and(min-width: 992px){
     .contenedor{
         width: 90%;
+        max-width: 1100px;
     }
 }
 
@@ -133,46 +134,59 @@ div.barra{
 }
 
 div.logo{
-    width:80%
+    width:20%;
+    float:left;
 }
 div.logo img{
-    width: 100%;
+    width: 5%;
 }
 @media only screen and(min-width: 768px){
     div.logo{
-        width: 33%;
+        width: 5%;
         float: left;
     }
 }
+/**navegacion principal**/
 
 nav.navegacion-principal{
-    display: none;
     display: block;
-}
-
-nav.navegacion-principal a{
-    font-family: "Lucida Sans Unicode";
-    color: #ffffff;
-    font-size: 1em;
-    text-transform: uppercase;
-    text-decoration: none;
-    padding: 50px 40px!important;
-}
-
-nav.navegacion-principal a:hover{
-    background-color: #fe4918;
+    text-align: right;
+    align-content: center;
 }
 
 @media only screen and(min-width: 768px){
     nav.navegacion-principal{
-        width: 67%;
+        width: 57%;
         float: right;
         text-align: right;
         display: block;
     }
     nav.navegacion-principal a{
         margin-right: 10px;
-        padding: 50px 40px!important;
+        padding: 30px 20px!important;
         display: inline-block;
     }
+}
+
+nav.navegacion-principal a{
+     font-family: "Lucida Sans Unicode";
+     color: #ffffff;
+     font-size: 1em;
+     text-transform: uppercase;
+     text-decoration: none;
+    transition: all .7s ease;
+    padding: 20px 20px!important;
+ }
+
+nav.navegacion-principal a:hover{
+    background-color: #fe4918;
+}
+
+nav.navegacion-principal a:last-child{
+    border: 2px solid #fe4918;
+    color: #fe4918;
+}
+
+nav.navegacion-principal a:last-child:hover{
+    color: white;
 }
