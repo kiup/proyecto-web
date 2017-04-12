@@ -1,47 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link href="css/main.css" rel="stylesheet" type="text/css">
-    <meta charset="UTF-8">
-    <div class="hero">
-        <div class="contenido-header"><!--Barra redes sociales-->
-            <nav class="redes-sociales">
-                <a href="#"><img src="imagenes/fa-facebook-square.png" width="50" height="50" alt="icono-facebook"></a>
-                <a href="#"><img src="imagenes/fa-twitter.png" width="50" height="50" alt="icono-twitter"></a>
-                <a href="#"><img src="imagenes/fa-instagram.png" width="50" height="50" alt="icono-instagram"></a>
-            </nav>
-           <div class="informacion-evento"><!--Información evento-->
-               <div class="clearfix">
-                   <p class="fecha"><img src="imagenes/fa-calendar.png" width="23" height="23" alt="icono-instagram">10-Dic-17</p>
-                   <p class="lugar"><img src="imagenes/fa-map-marker.png" width="20" height="22" alt="icono-instagram">M&eacute;rida, Yucat&aacute;n</p>
-               </div>
-               <h1 class="nombre-sitio">CityConferences</h1>
-               <p class="slogan">La mejor p&aacute;gina de <span>Conferencias</span></p>
-           </div>
-        </div>
-
-    </div>
-
-    <div class="barra">
-        <div class="contenedor clearfix">
-            <div class="logo">
-                <img src="imagenes/logo.png" alt="logo-cityconferences">
-            </div>
-            <div class="menu-movil">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <nav class="navegacion-principal">
-                <a href="#">Conferencias</a>
-                <a href="#">Calendario</a>
-                <a href="#">Invitados</a>
-                <a href="#">Reservaciones</a>
-            </nav>
-        </div>
-    </div>
+  <link rel="stylesheet" href="css/font-awesome.min.css">
 </head>
 <body>
+  <link href="css/main.css" rel="stylesheet" type="text/css">
+  <meta charset="UTF-8">
+  <div class="hero">
+    <div class="contenido-header"><!--Barra redes sociales-->
+      <nav class="redes-sociales">
+        <a href="#"><img src="imagenes/fa-facebook-square.png" width="50" height="50" alt="icono-facebook"></a>
+        <a href="#"><img src="imagenes/fa-twitter.png" width="50" height="50" alt="icono-twitter"></a>
+        <a href="#"><img src="imagenes/fa-instagram.png" width="50" height="50" alt="icono-instagram"></a>
+      </nav>
+      <div class="informacion-evento"><!--Información evento-->
+        <div class="clearfix">
+          <p class="fecha"><img src="imagenes/fa-calendar.png" width="23" height="23" alt="icono-instagram">10-Dic-17</p>
+          <p class="lugar"><img src="imagenes/fa-map-marker.png" width="20" height="22" alt="icono-instagram">M&eacute;rida, Yucat&aacute;n</p>
+        </div>
+        <h1 class="nombre-sitio">CityConferences</h1>
+        <p class="slogan">La mejor p&aacute;gina de <span>Conferencias</span></p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="barra">
+    <div class="contenedor clearfix">
+      <div class="logo">
+        <img src="imagenes/logo.png" alt="logo-cityconferences">
+      </div>
+
+      <div class="menu-movil">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <nav class="navegacion-principal clearfix">
+        <a href="#">Conferencias</a>
+        <a href="#">Calendario</a>
+        <a href="#">Invitados</a>
+        <a href="#">Reservaciones</a>
+      </nav>
+    </div><!--contenedor-->
+  </div><!--barra-->
+
+<!-- LA SECCIÓN DE INVITADOS VA AQUI -->
+
+  <section class="seccion contenedor">
+    <h2>La mejor p&aacute;gina de conferencias en M&eacute;rida</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+  </section>
+
+  <div class="contador parallax">
+    <div class="contenedor">
+      <ul class="resumen-evento clearfix">
+        <li><p class="numero">6</p> Invitados</li>
+        <li><p class="numero">15</p> Talleres</li>
+        <li><p class="numero">3</p> D&iacute;as</li>
+        <li><p class="numero">9</p> Conferencias</li>
+      </ul>
+    </div>
+  </div><!-- contador -->
+
+  <section class="precios seccion">
+    <h2>Precios</h2>
+    <div class="contenedor">
+      <ul class="lista-precios clearfix">
+        <li>
+          <div class="tabla-precio">
+            <h3>Pase por d&iacute;a</h3>
+            <p class="numero">$300</p>
+            <ul>
+              <li>Caracteristica 1</li>
+              <li>Caracteristica 2</li>
+              <li>Caracteristica 3</li>
+            </ul>
+            <a href="#" class="button hollow">Comprar</a>
+          </div>
+        </li>
+
+        <li>
+          <div class="tabla-precio">
+            <h3>Todos los d&iacute;as</h3>
+            <p class="numero">$500</p>
+            <ul>
+              <li>Caracteristica 1</li>
+              <li>Caracteristica 2</li>
+              <li>Caracteristica 3</li>
+            </ul>
+            <a href="#" class="button">Comprar</a>
+          </div>
+        </li>
+
+        <li>
+          <div class="tabla-precio">
+            <h3>Pase por dos d&iacute;as</h3>
+            <p class="numero">$400</p>
+            <ul>
+              <li>Caracteristica 1</li>
+              <li>Caracteristica 2</li>
+              <li>Caracteristica 3</li>
+            </ul>
+            <a href="#" class="button hollow">Comprar</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
 
 </body>
 </html>
