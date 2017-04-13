@@ -1,0 +1,37 @@
+div .testimoniales{
+    padding-bottom: 20px;
+}
+div .testimonial{
+    padding: 5px;
+}
+@media only screen and (min-width: 760px){
+    div .testimonial{
+        float: left;
+        width: 33%;
+    }
+}
+
+blockquote{
+    background-color: white;
+    border: 1px solid #fe4918;
+    position: relative;
+    margin: 0 0 10px 0;
+    padding-bottom: 20px;
+}
+
+blockquote p{
+    text-align: justify!important;
+    font-size: 1em!important;
+    font-family: "PT sans", SansSerif;
+    padding: 0 20px 0 65px;
+}
+blockquote p::before{
+    content: '\201c';
+    position: absolute;
+    left: 13px;
+    top: 0px;
+    font-size: 8rem;
+    padding: 0;
+    line-height: 1;
+    color: #fe4918;
+}
