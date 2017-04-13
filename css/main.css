@@ -1,28 +1,27 @@
+/*GLOBAL*/
 html{
     box-sizing: border-box;
     font-size: 16px;
     line-height: 1.4;
 }
- *:before, *:after{
+*:before, *:after{
     box-sizing: inherit;
 }
- body{
+body{
      background-color: #f2f2f2;
      font-family: Candara;
- }
+}
 h1.nombre-sitio{
     font-family: "Palatino Linotype";
     font-size:  7vw;
     text-transform: uppercase;
 }
-
 h2{
   font-family: "Palatino Linotype";
   font-size: 2.4em;
   text-transform: uppercase;
   text-align: center;
 }
-
 h2::after{
   content: '';
   margin: 0 auto;
@@ -31,20 +30,14 @@ h2::after{
   width: 100px;
   display: block;
 }
-
+/*GLOBAL*/
  /**clearfix**/
 .clearfix:after {
     clear: both;
-    content: ".";
+    content: " ";
     display: block;
     height: 0;
     visibility: hidden;
-}
-.clearfix {
-    display: inline-block;
-}
-.clearfix {
-    display: block;
 }
 /**clearfix**/
 
@@ -52,7 +45,6 @@ h2::after{
 div.hero{
     background-image: url(../imagenes/merida-de-noche.jpg);
     height: 80vh;
-
     background-position: top center;
     background-size: cover;
 }
@@ -61,7 +53,7 @@ div.contenido-header {
     padding-top: 10px;
 }
 /*desktop*/
-@media only screen and (min-width: 950px) {
+@media only screen and (min-width: 760px) {
     div.contenido-header{
         padding-top: 40px;
     }
@@ -97,7 +89,7 @@ div.informacion-evento{
     text-align: center;
     color: #ffffff;
 }
-@media only screen and (min-width:950px) {
+@media only screen and (min-width:760px) {
     div.informacion-evento{
         width:70%;
         margin: 0 auto;
@@ -129,34 +121,111 @@ p.slogan{
 p.slogan span{
     font-weight: bold;
 }
-@media only screen and (min-width:950px) {
+@media only screen and (min-width: 760px){
     h1.nombre-sitio{
-        margin: 0;
+        line-height: 0;
     }
 }
 /*nombre-lugar*/
 
-/**barra**/
+/*barra*/
+div.barra{
+    background-color: #353535;
+    padding: 20px 0px;
+}
+/*barra*/
+/*contenedor*/
 .contenedor{
-    width: 98%;
+    width: 95%;
     margin: 0 auto;
 }
-@media only screen and(min-width: 950px){
+@media only screen and (min-width: 760px) {
     .contenedor{
-        width: 95%;
+        width: 85%;
     }
 }
-@media only screen and(min-width: 768px){
-    .contenedor{
-        width: 90%;
+/*contenedor*/
+/*logo*/
+div.logo{
+    width: 80%;
+    float: left;
+}
+div.logo img{
+    width: 100%;
+}
+@media only screen and (min-width: 760px){
+    div.logo{
+        width: 33%;
     }
 }
-@media only screen and(min-width: 992px){
-    .contenedor{
-        width: 90%;
-        max-width: 1100px;
+/*logo*/
+/*menu-movil*/
+div.menu-movil{
+    width: 60px;
+    display: block;
+    float: right;
+    text-align: right;
+    margin-top: 12px;
+}
+div.menu-movil:hover{
+    cursor: pointer;
+}
+div.menu-movil span{
+    height: 8px;
+    margin-bottom: 10px;
+    background-color: white;
+    display: block;
+}
+@media only screen and (min-width: 760px){
+    div.menu-movil{
+        display: none;
     }
 }
+/*menu-movil*/
+/*navegacion-principal*/
+nav.navegacion-principal{
+    display: none;
+}
+nav.navegacion-principal a{
+    font-family: "Oswald";
+    color: white;
+    font-size: 1.4em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: alt .4s ease;
+    width: 100%;
+    display: block;
+    text-align: center;
+    margin-bottom: 20px;
+}
+nav.navegacion-principal a:hover{
+    background-color: #fe4918;
+}
+nav.navegacion-principal a:last-child{
+    border:2px solid #fe4918;
+    color: #fe4918;
+}
+nav.navegacion-principal a:last-child:hover{
+    color: white;
+}
+@media only screen and (min-width: 760px){
+    nav.navegacion-principal{
+        width: 66%;
+        float: right;
+        text-align: right;
+        display: block;
+    }
+    nav.navegacion-principal a{
+        padding: 10px 10px;
+        display: inline-block;
+        width: auto;
+        text-align: center;
+        margin: 5px 10px 0 0;
+    }
+}
+/*navegacion-principal*/
+
+
 
 section.seccion{
   padding: 30px 0;
@@ -168,111 +237,7 @@ section.seccion{
   text-align: center;
 }
 
-div.barra{
-    background-color: #353535;
-    padding: 20px 0;
-}
-div.logo{
-    width:20%;
-    float:left;
-}
-div.logo img{
-    width: 5%;
-    float: left;
-}
-@media only screen and(min-width: 950px){
-    div.logo{
-        width: 5%;
-        float: left;
-    }
-}
-/**barra**/
 
-/**navegacion principal**/
-nav.navegacion-principal{
-    text-align: center;
-    align-content: center;
-}
-nav.navegacion-principal a{
-    font-family: "Lucida Sans Unicode";
-    color: #ffffff;
-    font-size: 1em;
-    text-transform: uppercase;
-    text-decoration: none;
-    transition: all .7s ease;
-    width: 100%;
-    display: block;
-    text-align: center;
-    margin-bottom: 20px;
-}
-@media only screen and(min-width: 950px){
-    nav.navegacion-principal{
-        width: 57%;
-        float: right;
-        display: block;
-        width: auto;
-        display: inline;
-        text-align: right;
-        margin: 0px;
-    }
-    nav.navegacion-principal a{
-        margin-right: 10px;
-        padding: 30px 20px;
-        width: auto;
-        display: inline;
-        text-align: right;
-        margin: 0px;
-    }
-}
-
-nav.navegacion-principal a:hover{
-    background-color: #fe4918;
-}
-
-nav.navegacion-principal a:last-child{
-    border: 2px solid #fe4918;
-    color: #fe4918;
-}
-
-nav.navegacion-principal a:last-child:hover{
-    color: white;
-}
-/**navegacion principal**/
-
-/** Menu movil **/
-
-div.menu-movil{
-    width: 60px;
-    display: block;
-    float: right;
-    text-align: right;
-    margin-top: 12px;
-
-}
-
-div.menu-movil span{
-    height: 8px;
-    margin-bottom: 6px;
-    background-color: white;
-    display: none;
-}
-
-@media only screen and(min-width: 760px) {
-    div.menu-movil{
-        display: none;
-    }
-
-    div.menu-movil span{
-        height: 8px;
-        margin-bottom: 6px;
-        background-color: white;
-        display: block!important;
-    }
-}
-
-div.menu-movil:hover{
-    cursor: pointer;
-}
 
 /*contador*/
 
