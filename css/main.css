@@ -300,6 +300,10 @@ p.numero{
   background-color: #e33000;
 }
 
+.button.transparente{
+  background-color: transparent;
+}
+
 ul.lista-precios > li{
   padding: 10px;
 }
@@ -355,6 +359,13 @@ div.tabla-precio p.numero{
   color: #000000;
   margin: 20px 0;
 }
+
+/**MAPA**/
+div.mapa{
+  height: 420px;
+  background-color: white;
+}
+
 /**menu-movil
 div.menu-movil{
   width: 60px;
@@ -436,4 +447,35 @@ div.invitado p{
 div.invitado:hover p {
     bottom: -80px;
     opacity: 0;
+}
+
+/**Newsletter**/
+
+div.newsletter{
+  position: relative;
+  height: auto;
+}
+
+div.newsletter::before{
+  background-image: url(../img/bg-newsletter.jpg);
+  content: '';
+}
+
+div.newsletter .contenido{
+  padding: 100px 0;
+  color: #ffffff;
+  text-align: center;
+  position: relative;
+}
+
+div.newsletter .contenido p{
+  font-size: 1.2em;
+  text-transform: lowercase;
+}
+
+div.newsletter .contenido h3{
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 7vw;
+  font-family: 'PT sans', sans-serif;
 }
