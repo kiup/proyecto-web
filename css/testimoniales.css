@@ -7,13 +7,13 @@ div .testimonial{
 @media only screen and (min-width: 760px){
     div .testimonial{
         float: left;
-        width: 33%;
+        width: 30%;
     }
 }
 
 blockquote{
     background-color: white;
-    border: 1px solid #fe4918;
+    border: 1px solid gray;
     position: relative;
     margin: 0 0 10px 0;
     padding-bottom: 20px;
@@ -21,17 +21,45 @@ blockquote{
 
 blockquote p{
     text-align: justify!important;
-    font-size: 1em!important;
+    font-size: 14px!important;
     font-family: "PT sans", SansSerif;
     padding: 0 20px 0 65px;
 }
 blockquote p::before{
     content: '\201c';
     position: absolute;
-    left: 13px;
+    left: 10px;
     top: 0px;
-    font-size: 8rem;
+    font-size: 100px;
     padding: 0;
     line-height: 1;
+    color:#fe4918;
+}
+footer.info-testimonial{
+    padding: 0px;
+    background-color: white;
+}
+footer.info-testimonial img{
+    float: left;
+    width: 20%;
+    border-radius: 50%;
+    margin-left: 20px;
+}
+footer.info-testimonial cite{
+    text-align: left;
     color: #fe4918;
+    text-transform: uppercase;
+    font-size: 12px;
+    padding-top: 20px;
+    width: 66%;
+    float: right;
+    font-weight: bold;
+    font-style: normal;
+}
+
+footer.info-testimonial cite span{
+    text-transform: none;
+    display: block;
+    color: black;
+    margin-top: 5px;
 }
