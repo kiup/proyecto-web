@@ -30,6 +30,12 @@ h2::after{
   width: 100px;
   display: block;
 }
+h3{
+    font-family: 'Oswald';
+    font-size: 16px;
+    color: #fe4918;
+    text-transform: uppercase;
+}
 /*GLOBAL*/
  /**clearfix**/
 .clearfix:after {
