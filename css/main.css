@@ -6,20 +6,17 @@ html{
  *:before, *:after{
     box-sizing: inherit;
 }
-
  body{
      background-color: #f2f2f2;
      font-family: Candara;
  }
-
 h1.nombre-sitio{
     font-family: "Palatino Linotype";
     font-size:  7vw;
     text-transform: uppercase;
 }
 
- /**clearfix**/
-
+/**clearfix**/
 .clearfix:after {
     clear: both;
     content: ".";
@@ -33,9 +30,9 @@ h1.nombre-sitio{
 .clearfix {
     display: block;
 }
+/**clearfix**/
 
- /** cabecera **/
-
+/** cabecera **/
 div.hero{
     background-image: url(../imagenes/merida-de-noche.jpg);
     height: 80vh;
@@ -43,31 +40,48 @@ div.hero{
     background-position: top center;
     background-size: cover;
 }
-div.contenido-header{
-    padding-top: 40px;
+/*movil*/
+div.contenido-header {
+    padding-top: 10px;
 }
-
-@media only screen and (min-width:768px) {
+/*desktop*/
+@media only screen and (min-width: 950px) {
     div.contenido-header{
-        padding-top: 10px;
+        padding-top: 40px;
     }
 }
+/** cabecera **/
+
+/**navegador-redes**/
 nav.redes-sociales{
     text-align: center;
 }
 nav.redes-sociales a{
     margin-right: 20px;
 }
-
 nav.redes-sociales a:last-child{
     margin-right: 0;
 }
+/**navegador-redes**/
+
+/**icons**/
+#facebook:hover{
+    content: url("../imagenes/fa-facebook-square_color.png");
+}
+#instagram:hover{
+    content: url("../imagenes/fa-instagram_color.png");
+}
+#twitter:hover{
+    content: url("../imagenes/fa-twitter_color.png");
+}
+/**icons**/
+
+/*informacion-evento*/
 div.informacion-evento{
     text-align: center;
     color: #ffffff;
 }
-
-@media only screen and (min-width:768px) {
+@media only screen and (min-width:950px) {
     div.informacion-evento{
         width:70%;
         margin: 0 auto;
@@ -80,103 +94,98 @@ div.informacion-evento p{
     font-size: 20px;
     text-transform: uppercase;
 }
+/*informacion-evento*/
 
+/*inf-evento*/
 p.fecha{
     float: left;
 }
-
 p.lugar{
     float: right;
 }
+/*inf-evento*/
 
+/*nombre-lugar*/
 p.slogan{
     text-transform: none !important;
     font-size: 30px !important;
 }
-
 p.slogan span{
     font-weight: bold;
 }
-
-@media only screen and (min-width:768px) {
+@media only screen and (min-width:950px) {
     h1.nombre-sitio{
         margin: 0;
     }
 }
+/*nombre-lugar*/
 
 /**barra**/
 .contenedor{
     width: 98%;
     margin: 0 auto;
 }
-
-@media only screen and(min-width: 480px){
+@media only screen and(min-width: 950px){
     .contenedor{
         width: 95%;
     }
 }
-
-@media only screen and(min-width: 768px){
-    .contenedor{
-        width: 90%;
-    }
-}
-@media only screen and(min-width: 992px){
-    .contenedor{
-        width: 90%;
-        max-width: 1100px;
-    }
-}
-
 div.barra{
     background-color: #353535;
     padding: 20px 0;
 }
-
 div.logo{
     width:20%;
     float:left;
 }
 div.logo img{
     width: 5%;
+    float: left;
 }
-@media only screen and(min-width: 768px){
+@media only screen and(min-width: 950px){
     div.logo{
         width: 5%;
         float: left;
     }
 }
-/**navegacion principal**/
+/**barra**/
 
+/**navegacion principal**/
 nav.navegacion-principal{
-    display: block;
-    text-align: right;
+    text-align: center;
     align-content: center;
 }
-
-@media only screen and(min-width: 768px){
+nav.navegacion-principal a{
+    font-family: "Lucida Sans Unicode";
+    color: #ffffff;
+    font-size: 1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all .7s ease;
+    width: 100%;
+    display: block;
+    text-align: center;
+    margin-bottom: 20px;
+}
+@media only screen and(min-width: 950px){
     nav.navegacion-principal{
         width: 57%;
         float: right;
-        text-align: right;
         display: block;
+        width: auto;
+        display: inline;
+        text-align: right;
+        margin: 0px;
     }
     nav.navegacion-principal a{
         margin-right: 10px;
-        padding: 30px 20px!important;
-        display: inline-block;
+        padding: 30px 20px;
+        width: auto;
+        display: inline;
+        text-align: right;
+        margin: 0px;
     }
 }
-
-nav.navegacion-principal a{
-     font-family: "Lucida Sans Unicode";
-     color: #ffffff;
-     font-size: 1em;
-     text-transform: uppercase;
-     text-decoration: none;
-    transition: all .7s ease;
-    padding: 20px 20px!important;
- }
 
 nav.navegacion-principal a:hover{
     background-color: #fe4918;
@@ -189,4 +198,40 @@ nav.navegacion-principal a:last-child{
 
 nav.navegacion-principal a:last-child:hover{
     color: white;
+}
+/**navegacion principal**/
+
+/** Menu movil **/
+
+div.menu-movil{
+    width: 60px;
+    display: block;
+    float: right;
+    text-align: right;
+    margin-top: 12px;
+
+}
+
+div.menu-movil span{
+    height: 8px;
+    margin-bottom: 6px;
+    background-color: white;
+    display: none;
+}
+
+@media only screen and(min-width: 760px) {
+    div.menu-movil{
+        display: none;
+    }
+
+    div.menu-movil span{
+        height: 8px;
+        margin-bottom: 6px;
+        background-color: white;
+        display: block!important;
+    }
+}
+
+div.menu-movil:hover{
+    cursor: pointer;
 }
