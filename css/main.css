@@ -371,16 +371,15 @@ div.tabla-precio ul li{
   line-height: 26px;
 }
 
-div.tabla-precio ul li::before{
-  font-family: 'FontAwesome';
+/**div.tabla-precio ul li::before{
   display: inline-block;
   vertical-align: top;
   padding: 0 5px;
   font-size: 20px;
   color: green;
   -webkit-font-smoothing: antialiased;
-  content: '\f00c';
-}
+  content: &#10004;
+}**/
 
 div.tabla-precio h3{
   font-family: 'Oswald';
@@ -481,50 +480,4 @@ div.invitado p{
 div.invitado:hover p {
     bottom: -80px;
     opacity: 0;
-}
-
-/**Newsletter**/
-
-div.newsletter{
-  position: relative;
-  height: auto;
-}
-
-div.newsletter::before{
-  background-image: url(../img/bg-newsletter.jpg);
-  content: '';
-}
-
-div.newsletter .contenido{
-  padding: 100px 0;
-  color: #ffffff;
-  text-align: center;
-  position: relative;
-}
-
-div.newsletter .contenido p{
-  font-size: 1.2em;
-  text-transform: uppercase;
-}
-
-div.newsletter .contenido h3{
-  color: #ffffff;
-  text-transform: uppercase;
-  font-size: 4vw;
-  font-family: 'PT sans', sans-serif;
-}
-
-/** Cuenta Regresiva**/
-div.cuenta-regresiva ul li{
-  text-transform: uppercase;
-  font-family: "Lucida Sans Unicode";
-  font-size: 1.6rem;
-  text-align: center;
-}
-
-@media only screen and (min-width: 768px){
-  div.cuenta-regresiva ul li{
-    width: 25%;
-    float: left;
-  }
 }
