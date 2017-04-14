@@ -10,7 +10,7 @@ footer .contenedor > div{
 }
 @media only screen and (min-width: 760px){
     footer .contenedor > div{
-        width: 30%;
+        width: 29%;
         float: left;
     }
 }
