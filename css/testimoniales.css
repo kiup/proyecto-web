@@ -36,8 +36,8 @@ blockquote p::before{
     color:#fe4918;
 }
 footer.info-testimonial{
-    padding: 0px;
-    background-color: white;
+    padding: 0;
+    background-color: transparent;
 }
 footer.info-testimonial img{
     float: left;

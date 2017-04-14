@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+    <link href="css/footer.css" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width" />
+    <meta charset="UTF-8">
+</head>
+<body>
+<div class="hero">
+    <div class="contenido-header"><!--Barra redes sociales-->
+        <nav class="redes-sociales">
+            <a href="#"><img src="imagenes/fa-facebook-square.png" id="facebook" width="50" height="50" alt="icono-facebook"></a>
+            <a href="#"><img src="imagenes/fa-twitter.png" id="twitter" width="50" height="50" alt="icono-twitter"></a>
+            <a href="#"><img src="imagenes/fa-instagram.png" id="instagram" width="50" height="50" alt="icono-instagram"></a>
+        </nav>
+        <div class="informacion-evento"><!--Información evento-->
+            <div class="clearfix">
+                <p class="fecha"><img src="imagenes/fa-calendar.png" width="23" height="23" alt="icono-instagram">10-Dic-17</p>
+                <p class="lugar"><img src="imagenes/fa-map-marker.png" width="20" height="22" alt="icono-instagram">M&eacute;rida, Yucat&aacute;n</p>
+            </div>
+            <h1 class="nombre-sitio">CityConferences</h1>
+            <p class="slogan">La mejor p&aacute;gina de <span>Conferencias</span></p>
+        </div>
+    </div>
+
+</div>
+
+<div class="barra">
+    <div class="contenedor clearfix">
+        <div class="logo">
+            <img src="imagenes/logo.png" alt="logo-cityconferences">
+        </div>
+
+        <div class="menu-movil">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav class="navegacion-principal clearfix">
+            <a href="#">Conferencias</a>
+            <a href="#">Calendario</a>
+            <a href="#">Invitados</a>
+            <a href="registro.html">Reservaciones</a>
+        </nav>
+    </div><!--contenedor-->
+</div><!--barra-->
+<!--Formulario-->
+<section class="seccion contenedor">
+    <h2>Registro de usuarios</h2>
+    <form id="registro" class="registro" action="index.html" method="post">
+        <!--Datos usuaios-->
+        <div id="datos_usuario" class="registro caja clearfix">
+            <div class="campo">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="tu nombre">
+            </div>
+            <div class="campo">
+                <label for="apellido">Apellido:</label>
+                <input type="text" id="apellido" name="apellido" placeholder="tu apellido">
+            </div>
+            <div class="campo">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="tu email">
+            </div>
+            <div id="error"></div>
+        </div>
+        <!--Datos usuaios-->
+        <!--Paquetes-->
+        <div id="paquetes" class="paquetes">
+            <h3>Elige el n&uacute;mero de boletos</h3>
+            <ul class="lista-precios clearfix">
+                <li>
+                    <div class="tabla-precio">
+                        <h3>Pase por d&iacute;a (Viernes)</h3>
+                        <p class="numero">$300</p>
+                        <ul>
+                            <li>Caracteristica 1</li>
+                            <li>Caracteristica 2</li>
+                            <li>Caracteristica 3</li>
+                        </ul>
+                        <div class="orden">
+                            <label for="pase_dia">Boletos deseados:</label>
+                            <input type="number" min="0" id="pase_dia" size="3" placeholder="0">
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="tabla-precio">
+                        <h3>Todos los d&iacute;as</h3>
+                        <p class="numero">$500</p>
+                        <ul>
+                            <li>Caracteristica 1</li>
+                            <li>Caracteristica 2</li>
+                            <li>Caracteristica 3</li>
+                        </ul>
+                        <div class="orden">
+                        <label for="pase_completo">Boletos deseados:</label>
+                        <input type="number" min="0" id="pase_completo" size="3" placeholder="0">
+                    </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="tabla-precio">
+                        <h3>Pase por dos d&iacute;as(Viernes y S&aacute;bado)</h3>
+                        <p class="numero">$400</p>
+                        <ul>
+                            <li>Caracteristica 1</li>
+                            <li>Caracteristica 2</li>
+                            <li>Caracteristica 3</li>
+                        </ul>
+                        <div class="orden">
+                            <label for="pase_dos_dias">Boletos deseados:</label>
+                            <input type="number" min="0" id="pase_dos_dias" size="3" placeholder="0">
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!--Paquetes-->
+        <!--#eventos-->
+        <div id="eventos" class="eventos clearfix">
+            <h3>Elige tus talleres</h3>
+            <!--caja-->
+            <div class="caja">
+                <!--#viernes-->
+                <div id="viernes" class="contenido-dia clearfix">
+                    <h4>Viernes</h4>
+                    <div>
+                        <p>Talleres:</p>
+                        <label><input type="checkbox" name="registro[]" id="taller_01" value="taller_01"><time>10:00</time> Responsive Web Design</label>
+                        <label><input type="checkbox" name="registro[]" id="taller_02" value="taller_02"><time>12:00</time> Flexbox</label>
+                        <label><input type="checkbox" name="registro[]" id="taller_03" value="taller_03"><time>14:00</time> HTML5 y CSS3</label>
+                        <label><input type="checkbox" name="registro[]" id="taller_04" value="taller_04"><time>17:00</time> Drupal</label>
+                        <label><input type="checkbox" name="registro[]" id="taller_05" value="taller_05"><time>19:00</time> WordPress</label>
+                    </div>
+                    <div>
+                        <p>Conferencias:</p>
+                        <label><input type="checkbox" name="registro[]" id="conf_01" value="conf_01"><time>10:00</time> Como ser Freelancer</label>
+                        <label><input type="checkbox" name="registro[]" id="conf_02" value="conf_02"><time>17:00</time> Tecnologías del Futuro</label>
+                        <label><input type="checkbox" name="registro[]" id="conf_03" value="conf_03"><time>19:00</time> Seguridad en la Web</label>
+                    </div>
+                    <div>
+                        <p>Seminarios:</p>
+                        <label><input type="checkbox" name="registro[]" id="sem_01" value="sem_01"><time>10:00</time> Diseño UI y UX para móviles</label>
+                    </div>
+                </div>
+                <!--Viernes-->
+                <!--Sabado-->
+                <div id="sabado" class="contenido-dia clearfix">
+                    <h4>Sábado</h4>
+                    <div>
+                        <p>Talleres:</p>
+                        <label><input type="checkbox" name="registro[]" id="taller_06" value="taller_06"><time>10:00</time> AngularJS</label>
+                        <label><input type="checkbox" name="registro[]" id="taller_07" value="taller_07"><time>12:00</time> PHP y MySQL</label>
+                        <label><input type="checkbox" name="registro[]" id="taller_08" value="taller_08"><time>14:00</time> JavaScript Avanzado</label>
+                        <label><input type="checkbox" name="registro[]" id="taller_09" value="taller_09"><time>17:00</time> SEO en Google</label>
+                        <label><input type="checkbox" name="registro[]" id="taller_10" value="taller_10"><time>19:00</time> De Photoshop a HTML5 y CSS3</label>
+                        <label><input type="checkbox" name="registro[]" id="taller_11" value="taller_11"><time>21:00</time> PHP Medio y Avanzado</label>
+                    </div>
+                    <div>
+                        <p>Conferencias:</p>
+                        <label><input type="checkbox" name="registro[]" id="conf_04" value="conf_04"><time>10:00</time> Como crear una tienda online que venda millones en pocos días</label>
+                        <label><input type="checkbox" name="registro[]" id="conf_05" value="conf_05"><time>17:00</time> Los mejores lugares para encontrar trabajo</label>
+                        <label><input type="checkbox" name="registro[]" id="conf_06" value="conf_06"><time>19:00</time> Pasos para crear un negocio rentable</label>
+                    </div>
+                    <div>
+                        <p>Seminarios:</p>
+                        <label><input type="checkbox" name="registro[]" id="sem_02" value="sem_02"><time>10:00</time> Aprende a Programar en una mañana</label>
+                        <label><input type="checkbox" name="registro[]" id="sem_03" value="sem_03"><time>17:00</time> Diseño UI y UX para móviles</label>
+                    </div>
+                </div>
+                <!--sabado-->
+                <!--domingo-->
+                <div id="domingo" class="contenido-dia clearfix">
+                    <h4>Domingo</h4>
+                    <div>
+                        <p>Talleres:</p>
+                        <label><input type="checkbox" name="registro[]" id="taller_12" value="taller_12"><time>10:00</time> Laravel</label>
+                        <label><input type="checkbox" name="registro[]" id="taller_13" value="taller_13"><time>12:00</time> Crea tu propia API</label>
+                        <label><input type="checkbox" name="registro[]" id="taller_14" value="taller_14"><time>14:00</time> JavaScript y jQuery</label>
+                        <label><input type="checkbox" name="registro[]" id="taller_15" value="taller_15"><time>17:00</time> Creando Plantillas para WordPress</label>
+                        <label><input type="checkbox" name="registro[]" id="taller_16" value="taller_16"><time>19:00</time> Tiendas Virtuales en Magento</label>
+                    </div>
+                    <div>
+                        <p>Conferencias:</p>
+                        <label><input type="checkbox" name="registro[]" id="conf_07" value="conf_07"><time>10:00</time> Como hacer Marketing en línea</label>
+                        <label><input type="checkbox" name="registro[]" id="conf_08" value="conf_08"><time>17:00</time> ¿Con que lenguaje debo empezar?</label>
+                        <label><input type="checkbox" name="registro[]" id="conf_09" value="conf_09"><time>19:00</time> Frameworks y librerias Open Source</label>
+                    </div>
+                    <div>
+                        <p>Seminarios:</p>
+                        <label><input type="checkbox" name="registro[]" id="sem_04" value="sem_04"><time>14:00</time> Creando una App en Android en una tarde</label>
+                        <label><input type="checkbox" name="registro[]" id="sem_05" value="sem_05"><time>17:00</time> Creando una App en iOS en una tarde</label>
+                    </div>
+                </div>
+                <!--domingo-->
+            </div>
+            <!--caja-->
+        </div>
+        <!--eventos-->
+
+        <div id="resumen" class="resumen">
+            <h3>Pago y extras</h3>
+            <div class="caja clearfix">
+                <div class="extras">
+                    <div class="orden">
+                        <label for="camisa_evento">Camisa del evento $10 <small>(promocion 7% descuento)</small></label>
+                        <input type="number" min="0" id="camisa_evento" size="3" placeholder="0">
+                    </div>
+                    <div class="orden">
+                        <label for="etiquetas">Paquete de 10 etiquetas $2 <small>(HTML, CSS3, JavaScript)</small></label>
+                        <input type="number" min="0" id="etiquetas" size="3" placeholder="0">
+                    </div>
+                    <div class="orden">
+                        <label for="regalo">Seleccione un regalo</label>
+                        <select id="regalo" required>
+                            <option value="">Seleccione un regalo</option>
+                            <option value="etiqueta_r">Etiquetas</option>
+                            <option value="pulsera_r">Pulsera</option>
+                        </select>
+                    </div>
+                    <input type="button" id="calcular" class="button" value="Calcular">
+                </div>
+                <div class="total">
+                    <p>Resumen:</p>
+                    <div id="lista-productos">
+
+                    </div>
+                    <p>Total:</p>
+                    <div id="suma-total"></div>
+                    <input id="btnRegistro" type="submit" class="button" valor="Pagar">
+                </div>
+            </div>
+        </div>
+
+    </form>
+</section>
+<!--Formulario-->
+<!--FOOTER-->
+<footer class="site-footer">
+    <div class="contenedor clearfix">
+        <div class="footer-informacion">
+            <h3>Sobre <span>cityconferences</span></h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+        <div class="ultimos-tweets">
+            <h3>&Uacute;ltimos <span>tweets</span></h3>
+            <ul>
+                <li>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                    nisi ut aliquip ex ea commodo consequat.</li>
+                <li>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                    nisi ut aliquip ex ea commodo consequat.</li>
+                <li>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                    nisi ut aliquip ex ea commodo consequat.</li>
+            </ul>
+        </div>
+        <div class="menu">
+            <h3>Redes <span>sociales</span></h3>
+            <nav class="redes-sociales">
+                <a href="#"><img src="imagenes/fa-facebook-square.png" id="facebook-footer" width="50" height="50" alt="icono-facebook"></a>
+                <a href="#"><img src="imagenes/fa-twitter.png" id="twitter-footer" width="50" height="50" alt="icono-twitter"></a>
+                <a href="#"><img src="imagenes/fa-instagram.png" id="instagram-footer" width="50" height="50" alt="icono-instagram"></a>
+            </nav>
+        </div>
+    </div>
+    <p class="copyright">Con 	&hearts; por el equipo # de la materia de web</p>
+</footer>
+<!--FOOTER-->
+</body>
+</html>
