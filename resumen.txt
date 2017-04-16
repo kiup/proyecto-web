@@ -1,0 +1,8 @@
+Resumen
+
+Nombre de la página: City Conferences
+
+Acerca de la página: La página web informará acerca de conferencias que se llevarán
+a cabo en la ciudad de Mérida, los interesados en asistir a estas conferencias podrán
+comprar los boletos en ella asi como informarse acerca de las personas que asistirán
+e infomración en redes sociales.

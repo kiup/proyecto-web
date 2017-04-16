@@ -8,6 +8,7 @@ html{
     box-sizing: inherit;
 }
 body{
+     margin: 0;
      background-color: #f2f2f2;
      font-family: Candara;
 }
@@ -398,33 +399,6 @@ div.mapa{
   height: 420px;
   background-color: white;
 }
-
-/**menu-movil
-div.menu-movil{
-  width: 60px;
-  display: block;
-  float: right;
-  text-align: right;
-  margin-top: 12px;
-}
-
-div.menu-movil:hover{
-  cursor: pointer;
-}
-
-@media only screen and(min-width: 768px){
-  div.menu-movil{
-    display: none;
-  }
-}
-
-div.menu-movil span{
-  height: 8px;
-  margin-bottom: 6px;
-  background-color: white;
-  display: block;
-}
-**/
 
 /** Invitados **/
 
