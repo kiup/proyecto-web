@@ -1,4 +1,5 @@
 <?php include_once 'includes/templates/header.php'?>
+    <script type="text/javascript" src="js/main.js"></script>
   <section class="seccion contenedor">
     <h2>La mejor p&aacute;gina de conferencias en M&eacute;rida</h2>
     <p>
