@@ -1,6 +1,6 @@
 <?php include_once 'includes/templates/header.php'?>
 <!--Formulario-->
-<section class="seccion contenedor">
+<section class="seccion contenedor" id="seccion-registro">
     <h2>Registro de usuarios</h2>
     <form id="registro" class="registro" action="index.php" method="post">
         <!--Datos usuaios-->

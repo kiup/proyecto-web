@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
     <link href="css/main.css" rel="stylesheet" type="text/css">
     <link href="css/testimoniales.css" rel="stylesheet" type="text/css">
     <link href="css/registro.css" rel="stylesheet" type="text/css">
     <link href="css/newsletter.css" rel="stylesheet" type="text/css">
     <link href="css/footer.css" rel="stylesheet" type="text/css">
+    <link href="css/seccion-programa.css" rel="stylesheet" type="text/css">
     <script src="mapa.js"></script>
     <meta name="viewport" content="width=device-width" />
     <meta charset="UTF-8">
@@ -43,10 +45,10 @@
         </div>
 
         <nav class="navegacion-principal clearfix">
-            <a href="#">Conferencias</a>
+            <a href="index.php#seccion-programa">Conferencias</a>
             <a href="#">Calendario</a>
-            <a href="#">Invitados</a>
-            <a href="registro.php">Reservaciones</a>
+            <a href="index.php#seccion-invitados">Invitados</a>
+            <a href="registro.php#seccion-registro">Reservaciones</a>
         </nav>
     </div><!--contenedor-->
 </div><!--barra-->

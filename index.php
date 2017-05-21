@@ -7,8 +7,46 @@
     </p>
   </section>
 
+  <section class="programa" id="seccion-programa">
+    <div class="contenedor-video">
+        <video autoplay loop poster="bg-talleres.jpg">
+            <source src="video/video.mp4" type="video/mp4">
+            <source src="video/video.webm" type="video/webm">
+            <source src="video/video.ogv" type="video/ogv">
+        </video>
+    </div><!-- Contenedor video -->
+    <div class="contenido-programa">
+        <div class="contenedor">
+            <div class="programa-evento">
+                <h2>Programa del evento</h2>
+                <nav class="menu-programa">
+                    <a href="#"><i class="fa fa-code" aria-hidden="true"></i> Talleres</a>
+                    <a href="#"><i class="fa fa-comment" aria-hidden="true"></i> Conferencias</a>
+                    <a href="#"><i class="fa fa-university" aria-hidden="true"></i> Seminarios</a>
+                </nav>
+
+                <div id="talleres" class="info-curso ocultar clearfix">
+                    <div class="detalle-evento">
+                        <h3>HTML5, CSS3 y JavaScript</h3>
+                        <p><i class="fa fa-clock-o" aria-hidden="true"></i> 16:00 hrs</p>
+                        <p><i class="fa fa-calendar" aria-hidden="true"></i> 10 de Dic</p>
+                        <p><i class="fa fa-user" aria-hidden="true"></i> Juan Pablo De la torre Valdez</p>
+                    </div>
+                    <div class="detalle-evento">
+                        <h3>Responsive Web Design</h3>
+                        <p><i class="fa fa-clock-o" aria-hidden="true"></i> 20:00 hrs</p>
+                        <p><i class="fa fa-calendar" aria-hidden="true"></i> 10 de Dic</p>
+                        <p><i class="fa fa-user" aria-hidden="true"></i> Juan Pablo De la torre Valdez</p>
+                    </div>
+                    <a href="#" class="button float-right">Ver todos</a>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+
 <!-- LA SECCIÓN DE INVITADOS VA AQUI -->
-  <section class="invitados contenedor seccion">
+  <section class="invitados contenedor seccion" id="seccion-invitados">
     <h2>Nuestros invitados</h2>
     <ul class="lista-invitados clearfix">
       <li>

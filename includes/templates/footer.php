@@ -31,7 +31,7 @@
             </nav>
         </div>
     </div>
-    <p class="copyright">Con &hearts; por el equipo # de la materia de web</p>
+    <p class="copyright">Con &hearts; por el equipo #5 de la materia de web</p>
 </footer>
 <!--FOOTER-->
 
