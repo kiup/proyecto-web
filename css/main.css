@@ -158,7 +158,7 @@ div.logo{
     float: left;
 }
 div.logo img{
-    width: 100%;
+    width: 10%;
 }
 @media only screen and (min-width: 760px){
     div.logo{

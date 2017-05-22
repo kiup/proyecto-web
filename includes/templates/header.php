@@ -36,7 +36,7 @@
     <div class="contenedor clearfix">
         <div class="logo">
           <a href="index.php">            
-            <img src="" alt="logo-cityconferences">
+            <img src="imagenes/CityConferences.jpg" alt="logo-cityconferences">
           </a>
         </div>
 
@@ -48,7 +48,7 @@
 
         <nav class="navegacion-principal clearfix">
             <a href="index.php#seccion-programa">Conferencias</a>
-            <a href="#">Calendario</a>
+            <a href="calendario.php#seccion-calendario">Calendario</a>
             <a href="index.php#seccion-invitados">Invitados</a>
             <a href="registro.php#seccion-registro">Reservaciones</a>
         </nav>
