@@ -35,7 +35,9 @@
 <div class="barra">
     <div class="contenedor clearfix">
         <div class="logo">
+          <a href="index.php">            
             <img src="" alt="logo-cityconferences">
+          </a>
         </div>
 
         <div class="menu-movil">
