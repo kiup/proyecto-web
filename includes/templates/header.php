@@ -10,10 +10,11 @@
     <link href="css/seccion-programa.css" rel="stylesheet" type="text/css">
     <link href="css/calendario.css" rel="stylesheet" type="text/css">
     <script src="mapa.js"></script>
+    <script type="text/javascript" src="js/programa_evento.js"></script>
     <meta name="viewport" content="width=device-width" />
     <meta charset="UTF-8">
 </head>
-<body>
+<body onload="cambiarMenu()">
 <div class="hero">
     <div class="contenido-header"><!--Barra redes sociales-->
         <nav class="redes-sociales">
