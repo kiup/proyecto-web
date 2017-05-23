@@ -1,7 +1,3 @@
-<?php include_once 'includes/templates/header.php' ?>
-
-<section class="seccion-contenedor">
-  <h2>Resumen registro</h2>
   <?php if (isset($_POST['submit'])){
     $nombre = $_POST['nombre'];
     $apellido = $_POST['apellido'];
@@ -17,14 +13,36 @@
 
     include_once 'includes/funciones/funciones.php';
     $pedido = productos_json($boletos, $etiquetas, $etiquetas);
-    echo "<pre>";
-    var_dump($pedido);
-    echo "</pre>";
+
+    //eventos
+    $eventos = $_POST['registro'];
+    $registro = eventos_json($eventos);
+
+    try{
+        require_once ('includes/funciones/db_conexion.php');
+
+        $stmt = $conn->prepare("INSERT INTO registrados (nombre_registrado,
+          apellido_registrado, email_registrado, fecha_registo, pases_articulos,
+        talleres_registrados, regalo, pagado) VALUES (?,?,?,?,?,?,?,?)");
+        $stmt->bind_param("ssssssis", $nombre, $apellido, $email, $fecha, $pedido, $registro, $regalo, $total);
+        $stmt->execute();
+        $stmt->close();
+        $conn->close();
+        header('Location: validar_registro.php?exitoso=1');
+    }catch (Exception $e){
+        $error = $e->getMessage();
+    }
     ?>
-    <pre>
-      <?php var_dump($boletos) ?>
-    </pre>
   <?php } ?>
-</section>
+  <?php include_once 'includes/templates/header.php' ?>
+
+  <section class="seccion-contenedor">
+    <h2>Resumen registro</h2>
+    <?php if (isset($_GET['exitoso'])) {
+      if ($_GET['exitoso'] == "1") {
+        echo "Registro exitoso";
+      }
+    } ?>
+  </section>
 
 <?php include_once 'includes/templates/footer.php' ?>

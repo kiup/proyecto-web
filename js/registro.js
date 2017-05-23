@@ -73,6 +73,8 @@ function calcularMontos() {
     var camisas = document.getElementById('camisa_evento');
     var regalo = document.getElementById('regalo');
 
+    botonRegistro.disabled = true;
+
     event.preventDefault();
     if(regalo.value===''){
         alert("Debes elegir un regalo");
