@@ -10,6 +10,7 @@
     <link href="css/seccion-programa.css" rel="stylesheet" type="text/css">
     <link href="css/calendario.css" rel="stylesheet" type="text/css">
     <script src="mapa.js"></script>
+    <script src="./js/main.js"></script>
     <meta name="viewport" content="width=device-width" />
     <meta charset="UTF-8">
 </head>
@@ -36,7 +37,7 @@
 <div class="barra">
     <div class="contenedor clearfix">
         <div class="logo">
-          <a href="index.php">            
+          <a href="index.php">
             <img src="imagenes/CityConferences.jpg" alt="logo-cityconferences">
           </a>
         </div>

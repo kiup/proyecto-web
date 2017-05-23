@@ -2,7 +2,7 @@
 <!--Formulario-->
 <section class="seccion contenedor" id="seccion-registro">
     <h2>Registro de usuarios</h2>
-    <form id="registro" class="registro" action="index.php" method="post">
+    <form id="registro" class="registro" action="validar_registro.php" method="post">
         <!--Datos usuaios-->
         <div id="datos_usuario" class="registro caja clearfix">
             <div class="campo">
@@ -35,7 +35,7 @@
                         </ul>
                         <div class="orden">
                             <label for="pase_dia">Boletos deseados:</label>
-                            <input type="number" min="0" id="pase_dia" size="3" placeholder="0">
+                            <input type="number" min="0" id="pase_dia" size="3" name="boletos[]" placeholder="0">
                         </div>
                     </div>
                 </li>
@@ -51,7 +51,7 @@
                         </ul>
                         <div class="orden">
                         <label for="pase_completo">Boletos deseados:</label>
-                        <input type="number" min="0" id="pase_completo" size="3" placeholder="0">
+                        <input type="number" min="0" id="pase_completo" size="3" name="boletos[]" placeholder="0">
                     </div>
                     </div>
                 </li>
@@ -67,7 +67,7 @@
                         </ul>
                         <div class="orden">
                             <label for="pase_dos_dias">Boletos deseados:</label>
-                            <input type="number" min="0" id="pase_dos_dias" size="3" placeholder="0">
+                            <input type="number" min="0" id="pase_dos_dias" size="3" name="boletos[]" placeholder="0">
                         </div>
                     </div>
                 </li>
@@ -162,18 +162,19 @@
                 <div class="extras">
                     <div class="orden">
                         <label for="camisa_evento">Camisa del evento $10 <small>(promocion 7% descuento)</small></label>
-                        <input type="number" min="0" id="camisa_evento" size="3" placeholder="0">
+                        <input type="number" min="0" id="camisa_evento" name="pedido_camisas" size="3" placeholder="0">
                     </div>
                     <div class="orden">
                         <label for="etiquetas">Paquete de 10 etiquetas $2 <small>(HTML, CSS3, JavaScript)</small></label>
-                        <input type="number" min="0" id="etiquetas" size="3" placeholder="0">
+                        <input type="number" min="0" id="etiquetas" name="pedido_etiquetas" size="3" placeholder="0">
                     </div>
                     <div class="orden">
                         <label for="regalo">Seleccione un regalo</label><br>
-                        <select id="regalo" required>
+                        <select id="regalo" name="regalo" required>
                             <option value="">Seleccione un regalo</option>
-                            <option value="etiqueta_r">Etiquetas</option>
-                            <option value="pulsera_r">Pulsera</option>
+                            <option value="1">Etiqueta</option>
+                            <option value="2">Pulseras</option>
+                            <option value="3">Plumas</option>
                         </select>
                     </div>
                     <input type="button" id="calcular" class="button" value="Calcular">
@@ -183,9 +184,12 @@
                     <div id="lista-productos">
 
                     </div>
+
+                    <div id="suma_total" >
+                    </div>
                     <p>Total:</p>
-                    <div id="suma-total"></div>
-                    <input id="btnRegistro" type="submit" class="button" valor="Pagar">
+                    <input type="hidden" id="suma-total" name="total_pedido" id="total_pedido" value="total_pedido">
+                    <input id="btnRegistro" type="submit" name="submit" class="button" valor="Pagar">
                 </div>
             </div>
         </div>
