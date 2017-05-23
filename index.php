@@ -19,10 +19,22 @@
         <div class="contenedor">
             <div class="programa-evento">
                 <h2>Programa del evento</h2>
+                <?php
+                    try{
+                        require_once ('includes/funciones/db_conexion.php');
+                        $sql = "SELECT * FROM `categoria_evento` ";
+                        $resultado = $conn->query($sql);
+                    }catch (Exception $e) {
+                        $error = $e -> getMessage();
+                    }
+                ?>
                 <nav class="menu-programa">
-                    <a href="#"><i class="fa fa-code" aria-hidden="true"></i> Talleres</a>
-                    <a href="#"><i class="fa fa-comment" aria-hidden="true"></i> Conferencias</a>
-                    <a href="#"><i class="fa fa-university" aria-hidden="true"></i> Seminarios</a>
+                    <?php while($cat = $resultado->fetch_array(MYSQLI_ASSOC)) { ?>
+                        <?php $categoria = $cat['cat_evento']; ?>
+                            <a href="#<?php echo strtolower($categoria) ?>">
+                                <i class="fa <?php echo $cat['icono'] ?>" aria-hidden="true"></i> <?php echo $categoria ?>
+                            </a>
+                    <?php } ?>
                 </nav>
 
                 <div id="talleres" class="info-curso ocultar clearfix">
@@ -46,48 +58,7 @@
   </section>
 
 <!-- LA SECCIÓN DE INVITADOS VA AQUI -->
-  <section class="invitados contenedor seccion" id="seccion-invitados">
-    <h2>Nuestros invitados</h2>
-    <ul class="lista-invitados clearfix">
-      <li>
-        <div class="invitado">
-          <img src="imagenes/invitado1.jpg" alt="imagen invitado">
-          <p>Rafael Bautista</p>
-        </div>
-      </li>
-      <li>
-        <div class="invitado">
-          <img src="imagenes/invitado2.jpg" alt="imagen invitado">
-          <p>Shari Herrera</p>
-        </div>
-      </li>
-      <li>
-        <div class="invitado">
-          <img src="imagenes/invitado3.jpg" alt="imagen invitado">
-          <p>Gregorio Sanchez</p>
-        </div>
-      </li>
-      <li>
-        <div class="invitado">
-          <img src="imagenes/invitado4.jpg" alt="imagen invitado">
-          <p>Susana Rivera</p>
-        </div>
-      </li>
-      <li>
-        <div class="invitado">
-          <img src="imagenes/invitado5.jpg" alt="imagen invitado">
-          <p>Harnold Garcia</p>
-        </div>
-      </li>
-      <li>
-        <div class="invitado">
-          <img src="imagenes/invitado6.jpg" alt="imagen invitado">
-          <p>Susana Sanchez</p>
-        </div>
-      </li>
-    </ul>
-  </section>
-
+<?php include_once 'includes/templates/invitados.php'; ?>
   <!-- Termina sección invitados-->
 
   <div class="contador parallax">

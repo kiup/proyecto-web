@@ -50,7 +50,7 @@
         <nav class="navegacion-principal clearfix">
             <a href="index.php#seccion-programa">Conferencias</a>
             <a href="calendario.php#seccion-calendario">Calendario</a>
-            <a href="index.php#seccion-invitados">Invitados</a>
+            <a href="invitados.php#seccion-invitados">Invitados</a>
             <a href="registro.php#seccion-registro">Reservaciones</a>
         </nav>
     </div><!--contenedor-->
