@@ -18,6 +18,7 @@
             $error = $e->getMessage();
         }
     ?>
+
     <div class="calendario">
 
     <?php while($eventos = $resultado->fetch_all(MYSQLI_ASSOC) ) { ?>
