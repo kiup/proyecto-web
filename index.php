@@ -169,9 +169,9 @@
   <!--LA SECCION DE TESTIMONIALES VA AQUI-->
   <div class="newsletter parallax">
     <div class="contenido contenedor">
-      <p>Registrate al newsletter</p>
-      <h3>Conferencias</h3>
-      <a href="#" class="button transparente">Registro</a>
+      <p>Contacto</p>
+      <h3>Envianos tus comentarios y sugerencias</h3>
+      <a href="comentarios_y_sugerencias.php" class="button transparente">Enviar</a>
     </div> <!--contenido-->
   </div> <!--newsletter-->
 
