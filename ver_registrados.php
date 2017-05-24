@@ -44,6 +44,21 @@
                             <td><?php echo $registrados['nombre_regalo'] ?></td>
                             <td>$ <?php echo $registrados['pagado'] ?></td>
                         </tr>
+                        <tr>
+                            <td colspan="7">
+                                Eventos Registrados: <br>
+                                <?php $eventos = $registrados['talleres_registrados'];
+                                    $sql = formatear_eventos_a_sql($eventos);
+                                    $eventos_registrados = $conn->query($sql);
+
+                                    while($eventos = $eventos_registrados->fetch_assoc()){
+                                        foreach ($eventos as $evento) :
+                                            echo utf8_encode($evento . ", ");
+                                        endforeach;
+                                    }
+                                ?>
+                            </td>
+                        </tr>
                     <?php }
                     $conn->close();
                 }catch (Exception $e){

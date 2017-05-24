@@ -32,6 +32,16 @@ function usuario_admin_autenticado(){
   }
 }
 
+function formatear_eventos_a_sql($eventos){
+  $eventos = json_decode($eventos, true);
+  $sql = "SELECT `nombre_evento` FROM eventos WHERE clave = 'a' ";
+
+  foreach ($eventos['eventos'] as $evento):
+    $sql .= " OR clave = '{$evento}'";
+  endforeach;
+  return $sql;
+}
+
 function usuario_autenticado(){
   if(!revisar_usuario()){
     header('Location:login.php');
