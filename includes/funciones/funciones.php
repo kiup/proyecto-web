@@ -23,6 +23,33 @@ function productos_json(&$boletos, &$camisas = 0, &$etiquetas = 0){
   return json_encode($json);
 }
 
+function formatear_pedido($articulos) {
+  $articulos = json_decode($articulos, true);
+  $pedido = '';
+
+  if(array_key_exists('viernes', $articulos)):
+    $pedido .= 'Pase(s) viernes: ' . $articulos['viernes'] . "<br/>";
+  endif;
+
+    if(array_key_exists('sabado', $articulos)):
+        $pedido .= 'Pase(s) Sabado: ' . $articulos['sabado'] . "<br/>";
+    endif;
+
+    if(array_key_exists('domingo', $articulos)):
+        $pedido .= 'Pase(s) Domingo: ' . $articulos['domingo'] . "<br/>";
+    endif;
+
+    if(array_key_exists('camisas', $articulos)):
+        $pedido .= 'Camisas: ' . $articulos['camisas'] . "<br/>";
+    endif;
+
+    if(array_key_exists('etiquetas', $articulos)):
+        $pedido .= 'Etiquetas: ' . $articulos['etiquetas'] . "<br/>";
+    endif;
+
+    return $pedido;
+}
+
 function eventos_json(&$eventos)
 {
   $eventos_json = array();
