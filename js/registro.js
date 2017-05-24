@@ -28,6 +28,32 @@ function mostrarTalleresDomingo(){
     }
 }
 
+function calcularCostoTotal() {
+    var pase_viernes = document.getElementById('pase_viernes');
+    var pase_sabado = document.getElementById('pase_sabado');
+    var pase_domingo = document.getElementById('pase_domingo');
+
+    var camisa = document.getElementById('camisa_evento');
+    var etiquetas = document.getElementById('etiquetas');
+    var regalo = document.getElementById('regalo');
+
+    if(regalo.value == ''){
+        alert("Debes elegir un regalo");
+        regalo.focus();
+    }else{
+        var boletos_viernes = parseInt(pase_viernes.value)||0;
+        var boletos_sabado = parseInt(pase_sabado.value)||0;
+        var boletos_domingo = parseInt(pase_domingo.value)||0;
+        var cantCamisas = parseInt(camisa.value)||0;
+        var cantEtiquetas = parseInt(etiquetas.value)||0;
+
+        var totalPagar = (boletos_viernes * 300) +(boletos_sabado * 500) + (boletos_domingo * 400) +
+            ((cantCamisas * 10) * .93) + (cantEtiquetas * 2);
+
+        document.getElementById('total-pagar').innerHTML = totalPagar;
+    }
+}
+
 function calcularMontos() {
     //Campos datos usuario
     var nombre = document.getElementById('nombre');
@@ -45,6 +71,7 @@ function calcularMontos() {
     //Extras
     var etiquetas = document.getElementById('etiquetas');
     var camisas = document.getElementById('camisa_evento');
+    var regalo = document.getElementById('regalo');
 
     event.preventDefault();
     if(regalo.value===''){

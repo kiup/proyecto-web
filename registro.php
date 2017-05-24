@@ -182,7 +182,7 @@
                             <option value="3">Plumas</option>
                         </select>
                     </div>
-                    <input type="button" id="calcular" class="button" value="Calcular" onclick="calcularMontos()">
+                    <input type="button" id="calcular" class="button" value="Calcular" onclick="calcularCostoTotal()">
                 </div>
                 <div class="total">
                     <p>Resumen:</p>
@@ -193,7 +193,7 @@
                     <div id="suma_total" >
                     </div>
                     <p>Total:</p>
-                    <input type="hidden" id="suma-total" name="total_pedido" id="total_pedido" value="total_pedido">
+                    <p id="total-pagar"></p>
                     <input id="btnRegistro" type="submit" name="submit" class="button" valor="Pagar">
                 </div>
             </div>

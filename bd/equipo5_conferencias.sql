@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 22-05-2017 a las 04:38:03
+-- Tiempo de generación: 23-05-2017 a las 22:46:48
 -- Versión del servidor: 10.1.19-MariaDB
 -- Versión de PHP: 5.6.28
 
@@ -70,7 +70,8 @@ INSERT INTO `eventos` (`evento_id`, `nombre_evento`, `fecha_evento`, `hora_event
 (7, 'Como ser freelancer', '2016-12-09', '10:00:00', 2, 6, 'conf_01'),
 (8, 'Tecnologías del Futuro', '2016-12-09', '17:00:00', 2, 1, 'conf_02'),
 (9, 'Seguridad en la Web', '2016-12-09', '19:00:00', 2, 2, 'conf_03'),
-(10, 'Diseño UI y UX para móviles', '2016-12-09', '10:00:00', 1, 6, 'sem_01');
+(10, 'Diseño UI y UX para móviles', '2016-12-09', '10:00:00', 1, 6, 'sem_01'),
+(11, 'Creando una App en iOS en una tarde', '2016-12-11', '17:00:00', 1, 1, 'sem_05');
 
 -- --------------------------------------------------------
 
@@ -98,6 +99,44 @@ INSERT INTO `invitados` (`invitado_id`, `nombre_invitado`, `apellido_invitado`, 
 (5, 'Harold', 'Garcia', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'invitado5.jpg'),
 (6, 'Susan', 'Sanchez', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'invitado6.jpg');
 
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `regalos`
+--
+
+CREATE TABLE `regalos` (
+  `id_regalo` int(11) NOT NULL,
+  `nombre_regalo` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `regalos`
+--
+
+INSERT INTO `regalos` (`id_regalo`, `nombre_regalo`) VALUES
+(1, 'Pulsera'),
+(2, 'Etiqueta'),
+(3, 'Plumas');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `registrados`
+--
+
+CREATE TABLE `registrados` (
+  `id_registrado` bigint(20) UNSIGNED NOT NULL,
+  `nombre_registrado` varchar(50) NOT NULL,
+  `apellido_registrado` varchar(50) NOT NULL,
+  `email_registrado` int(11) NOT NULL,
+  `fecha_registo` datetime NOT NULL,
+  `pases_articulos` longtext NOT NULL,
+  `talleres_registrados` longtext NOT NULL,
+  `regalo` int(11) NOT NULL,
+  `pagado` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
 --
 -- Índices para tablas volcadas
 --
@@ -123,6 +162,20 @@ ALTER TABLE `invitados`
   ADD PRIMARY KEY (`invitado_id`);
 
 --
+-- Indices de la tabla `regalos`
+--
+ALTER TABLE `regalos`
+  ADD PRIMARY KEY (`id_regalo`);
+
+--
+-- Indices de la tabla `registrados`
+--
+ALTER TABLE `registrados`
+  ADD PRIMARY KEY (`id_registrado`),
+  ADD KEY `regalo` (`regalo`),
+  ADD KEY `regalo_2` (`regalo`);
+
+--
 -- AUTO_INCREMENT de las tablas volcadas
 --
 
@@ -135,12 +188,22 @@ ALTER TABLE `categoria_evento`
 -- AUTO_INCREMENT de la tabla `eventos`
 --
 ALTER TABLE `eventos`
-  MODIFY `evento_id` tinyint(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `evento_id` tinyint(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 --
 -- AUTO_INCREMENT de la tabla `invitados`
 --
 ALTER TABLE `invitados`
   MODIFY `invitado_id` tinyint(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+--
+-- AUTO_INCREMENT de la tabla `regalos`
+--
+ALTER TABLE `regalos`
+  MODIFY `id_regalo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+--
+-- AUTO_INCREMENT de la tabla `registrados`
+--
+ALTER TABLE `registrados`
+  MODIFY `id_registrado` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 --
 -- Restricciones para tablas volcadas
 --
@@ -151,6 +214,12 @@ ALTER TABLE `invitados`
 ALTER TABLE `eventos`
   ADD CONSTRAINT `eventos_ibfk_1` FOREIGN KEY (`id_cat_evento`) REFERENCES `categoria_evento` (`id_categoria`),
   ADD CONSTRAINT `eventos_ibfk_2` FOREIGN KEY (`id_inv`) REFERENCES `invitados` (`invitado_id`);
+
+--
+-- Filtros para la tabla `registrados`
+--
+ALTER TABLE `registrados`
+  ADD CONSTRAINT `registrados_ibfk_1` FOREIGN KEY (`regalo`) REFERENCES `regalos` (`id_regalo`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
