@@ -1,6 +1,28 @@
 <?php include_once 'includes/funciones/funciones.php';
     session_start();
     usuario_admin_autenticado();
+    if(isset($_POST['submit'])){
+        $nombre = $_POST['nombre'];
+        $apellido = $_POST['apellido'];
+        $descripcion = $_POST['descripcion'];
+        $directorio = "/invitados/";
+
+        if(move_uploaded_file($_FILES['imagen']['tmp_name'],__DIR__ .$directorio.$_FILES['imagen']['name'])){
+            $imagen_url = $_FILES['imagen']['name'];
+            $resultado = 'se subio correctamente';
+            try{
+                require_once ('includes/funciones/db_conexion.php');
+                $stmt = $conn -> prepare("INSERT INTO invitados (nombre_invitado, apellido_invitado, descripcion, uri_imagen) VALUES (?, ?, ?, ?)");
+                $stmt -> bind_param("ssss", $nombre, $apellido, $descripcion, $imagen_url);
+                $stmt -> execute();
+                $stmt->close();
+                $conn->close();
+                header('Location:agregar_invitado.php?exitoso=1');
+            }catch (Exception $e){
+                echo"Error" . $e->getMessage();
+            }
+        }
+    }
 ?>
 
 <?php include_once 'includes/templates/header.php';?>
@@ -39,5 +61,14 @@
             </div>
 
         </form>
+        <?php
+        if(isset($_GET['exitoso'])){
+            echo "
+                <div class='mensaje'>
+                    Se subi&oacute; correctamente
+                </div>
+            ";
+        }
+        ?>
     </section>
 <?php include_once 'includes/templates/footer.php'?>

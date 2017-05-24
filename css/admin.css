@@ -39,4 +39,6 @@ form.invitado input {
     border: 1px solid #cccccc;
 }
 
-form.invitado
+form.invitado input#imagen{
+    border:none;
+}
