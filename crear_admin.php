@@ -1,10 +1,17 @@
+<?php include_once 'includes/funciones/funciones.php';
+session_start();
+usuario_admin_autenticado();
+?>
+
 <?php include_once 'includes/templates/header.php';?>
 <header>
+    <link href="css/admin.css" rel="stylesheet" type="text/css">
     <link href="css/registro.css" rel="stylesheet" type="text/css">
 </header>
-<section class="seccion contenedor">
-    <h2>Crear administradores</h2>
+<section class="seccion admin contenedor">
 
+    <h2>Crear administradores</h2>
+    <?php include_once 'includes/templates/admin-header.php'?>
     <form action="crear_admin.php" class="login" method="POST">
         <div class="campo">
             <label for="usuario"> Usuario:</label>
@@ -30,9 +37,29 @@
         }
         $opciones = array(
                 'cost'=> 12,
-                'salt'=> mcrypt_create_iv(22, MCRYPT_DEV_URANDOM)
+                'salt'=> mcrypt_create_iv(22, MCRYPT_DEV_URANDOM),
         );
+
         $hash_password = password_hash($password, PASSWORD_BCRYPT, $opciones);
+        try{
+            require_once ('includes/funciones/db_conexion.php');
+            $stmt = $conn -> prepare("INSERT INTO admins (usuario, hash_pass) VALUES (?, ?)");
+            $stmt -> bind_param("ss", $usuario, $hash_password);
+            $stmt -> execute();
+            if($stmt->error){
+                echo "<div class='mensaje error'>";
+                echo "Hubo un error";
+                echo "</div>";
+            }else{
+                echo "<div class='mensaje'>";
+                echo "Se inserto el usuario correctamente";
+                echo "</div>";
+            }
+            $stmt->close();
+            $conn->close();
+        }catch (Exception $e){
+            echo"Error" . $e->getMessage();
+        }
     }
     ?>
 </section>

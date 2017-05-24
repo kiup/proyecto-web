@@ -1,0 +1,42 @@
+section.admin nav{
+    padding:20px;
+    background-color: #fe4918;
+    margin-bottom: 30px;
+}
+section.admin nav a{
+    text-decoration: none;
+    color: #ffffff;
+    padding: 5px 10px;
+}
+
+section.admin nav a:hover{
+    border-bottom: 2px solid white;
+}
+
+form.invitado{
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+}
+
+form.invitado div.campo{
+    width: 30%;
+    float: none;
+    padding: 5px;
+}
+
+form.invitado label{
+    width: 80%;
+    display: inline-block;
+}
+
+form.invitado input {
+    width: 100%;
+    border: 1px solid #cccccc;
+}
+.textarea{
+    width: 100%;
+    border: 1px solid #cccccc;
+}
+
+form.invitado
