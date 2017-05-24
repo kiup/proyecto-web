@@ -33,7 +33,7 @@ if(isset($_POST['submit'])){
         <link href="css/registro.css" rel="stylesheet" type="text/css">
     </header>
     <section class="seccion contenedor">
-        <h2>Iniciar sesi&oacute;n</h2>
+        <h2>Iniciar sesi&oacute;n (Solo Administradores)</h2>
 
         <form action="login.php" class="login" method="POST">
             <div class="campo">
@@ -46,7 +46,7 @@ if(isset($_POST['submit'])){
                 <input type="password" id="password" name="password" placeholder="tu contrase&ntilde;a">
 
             </div>
-            <div class="campo">
+            <div>
                 <input type="submit" name="submit" class="button" value="Iniciar sesi&oacute;n">
             </div>
         </form>
