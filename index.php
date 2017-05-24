@@ -1,5 +1,4 @@
 <?php include_once 'includes/templates/header.php'?>
-    <script type="text/javascript" src="js/main.js"></script>
   <section class="seccion contenedor">
     <h2>La mejor p&aacute;gina de conferencias en M&eacute;rida</h2>
     <p>
@@ -31,27 +30,72 @@
                 <nav class="menu-programa">
                     <?php while($cat = $resultado->fetch_array(MYSQLI_ASSOC)) { ?>
                         <?php $categoria = $cat['cat_evento']; ?>
-                            <a href="#<?php echo strtolower($categoria) ?>">
+                            <a href="#<?php echo strtolower($categoria) ?>" id="<?php echo strtolower($categoria) ?>" class="" onclick="cambiarMenu(this.id)">
                                 <i class="fa <?php echo $cat['icono'] ?>" aria-hidden="true"></i> <?php echo $categoria ?>
                             </a>
                     <?php } ?>
                 </nav>
+                <?php
+                try{
+                    require_once ('includes/funciones/db_conexion.php');
+                    $sql = "SELECT `evento_id`, `nombre_evento`, `fecha_evento`, `hora_evento`, `cat_evento`, `nombre_invitado`, `apellido_invitado` ";
+                    $sql .= "FROM `eventos` ";
+                    $sql .= "INNER JOIN `categoria_evento` ";
+                    $sql .= "ON eventos.id_cat_evento=categoria_evento.id_categoria ";
+                    $sql .= "INNER JOIN `invitados` ";
+                    $sql .= "ON eventos.id_inv=invitados.invitado_id ";
+                    $sql .= "AND eventos.id_cat_evento = 1 ";
+                    $sql .= "ORDER BY `evento_id` LIMIT 2;";
 
-                <div id="talleres" class="info-curso ocultar clearfix">
-                    <div class="detalle-evento">
-                        <h3>HTML5, CSS3 y JavaScript</h3>
-                        <p><i class="fa fa-clock-o" aria-hidden="true"></i> 16:00 hrs</p>
-                        <p><i class="fa fa-calendar" aria-hidden="true"></i> 10 de Dic</p>
-                        <p><i class="fa fa-user" aria-hidden="true"></i> Juan Pablo De la torre Valdez</p>
-                    </div>
-                    <div class="detalle-evento">
-                        <h3>Responsive Web Design</h3>
-                        <p><i class="fa fa-clock-o" aria-hidden="true"></i> 20:00 hrs</p>
-                        <p><i class="fa fa-calendar" aria-hidden="true"></i> 10 de Dic</p>
-                        <p><i class="fa fa-user" aria-hidden="true"></i> Juan Pablo De la torre Valdez</p>
-                    </div>
-                    <a href="#" class="button float-right">Ver todos</a>
-                </div>
+                    $sql .= "SELECT `evento_id`, `nombre_evento`, `fecha_evento`, `hora_evento`, `cat_evento`, `nombre_invitado`, `apellido_invitado` ";
+                    $sql .= "FROM `eventos` ";
+                    $sql .= "INNER JOIN `categoria_evento` ";
+                    $sql .= "ON eventos.id_cat_evento=categoria_evento.id_categoria ";
+                    $sql .= "INNER JOIN `invitados` ";
+                    $sql .= "ON eventos.id_inv=invitados.invitado_id ";
+                    $sql .= "AND eventos.id_cat_evento = 2 ";
+                    $sql .= "ORDER BY `evento_id` LIMIT 2;";
+
+                    $sql .= "SELECT `evento_id`, `nombre_evento`, `fecha_evento`, `hora_evento`, `cat_evento`, `nombre_invitado`, `apellido_invitado` ";
+                    $sql .= "FROM `eventos` ";
+                    $sql .= "INNER JOIN `categoria_evento` ";
+                    $sql .= "ON eventos.id_cat_evento=categoria_evento.id_categoria ";
+                    $sql .= "INNER JOIN `invitados` ";
+                    $sql .= "ON eventos.id_inv=invitados.invitado_id ";
+                    $sql .= "AND eventos.id_cat_evento = 3 ";
+                    $sql .= "ORDER BY `evento_id` LIMIT 2;";
+                }catch (Exception $e){
+                    $error = $e->getMessage();
+                }
+                ?>
+
+                <?php $conn->multi_query($sql); ?>
+
+                <?php
+                    do{
+                        $resultado = $conn->store_result();
+                        $row = $resultado->fetch_all(MYSQLI_ASSOC); ?>
+
+                        <?php $i = 0; ?>
+                        <?php foreach ($row as $evento): ?>
+                            <?php if($i % 2 == 0){?>
+                                <div id="div-<?php echo strtolower($evento['cat_evento']) ?>" class="info-curso ocultar clearfix" style="display: none">
+                            <?php } ?>
+                                <div class="detalle-evento">
+                                    <h3><?php echo utf8_encode($evento['nombre_evento']) ?></h3>
+                                    <p><i class="fa fa-clock-o" aria-hidden="true"></i> <?php echo $evento['hora_evento']; ?></p>
+                                    <p><i class="fa fa-calendar" aria-hidden="true"></i> <?php echo $evento['fecha_evento']; ?></p>
+                                    <p><i class="fa fa-user" aria-hidden="true"></i> <?php echo $evento['nombre_invitado']; ?></p>
+                                </div>
+
+                                <?php if($i % 2 == 1): ?>
+                                    <a href="#" class="button float-right">Ver todos</a>
+                                    </div>
+                                <?php endif ?>
+                            <?php $i++ ?>
+                            <?php endforeach; ?>
+                            <?php $resultado->free(); ?>
+                <?php } while ($conn->more_results() && $conn->next_result()); ?>
             </div>
         </div>
     </div>
