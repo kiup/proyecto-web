@@ -89,7 +89,7 @@
                                 </div>
 
                                 <?php if($i % 2 == 1): ?>
-                                    <a href="#" class="button float-right">Ver todos</a>
+                                    <a href="calendario.php" class="button float-right">Ver todos</a>
                                     </div>
                                 <?php endif ?>
                             <?php $i++ ?>
@@ -122,40 +122,40 @@
       <ul class="lista-precios clearfix">
         <li>
           <div class="tabla-precio">
-            <h3>Pase por d&iacute;a</h3>
+            <h3>Pase por Viernes</h3>
             <p class="numero">$300</p>
             <ul>
               <li>Caracteristica 1</li>
               <li>Caracteristica 2</li>
               <li>Caracteristica 3</li>
             </ul>
-            <a href="#" class="button hollow">Comprar</a>
+            <a href="registro.php" class="button hollow">Comprar</a>
           </div>
         </li>
 
         <li>
           <div class="tabla-precio">
-            <h3>Todos los d&iacute;as</h3>
+            <h3>Pase por S&aacute;bado</h3>
             <p class="numero">$500</p>
             <ul>
               <li>Caracteristica 1</li>
               <li>Caracteristica 2</li>
               <li>Caracteristica 3</li>
             </ul>
-            <a href="#" class="button">Comprar</a>
+            <a href="registro.php" class="button">Comprar</a>
           </div>
         </li>
 
         <li>
           <div class="tabla-precio">
-            <h3>Pase por dos d&iacute;as</h3>
+            <h3>Pase por D&oacute;mingo</h3>
             <p class="numero">$400</p>
             <ul>
               <li>Caracteristica 1</li>
               <li>Caracteristica 2</li>
               <li>Caracteristica 3</li>
             </ul>
-            <a href="#" class="button hollow">Comprar</a>
+            <a href="registro.php" class="button hollow">Comprar</a>
           </div>
         </li>
       </ul>
