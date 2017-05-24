@@ -32,6 +32,7 @@ div.campo{
 @media only screen and (min-width:760px) {
   div.campo{
     float: left;
+    width: 33%;
   }
 }
 
@@ -108,4 +109,18 @@ div.extras div.orden input{
 div.resumen input{
   display: block;
   margin: 10px auto;
+}
+form.login{
+  width: 30%;
+  margin: 0 auto;
+  display: block;
+}
+form.login div.campo{
+  width: 100%;
+  float: none;
+  padding: 5px;
+}
+form.login label{
+  width: 80px;
+  display: inline-block;
 }
