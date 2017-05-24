@@ -1,4 +1,9 @@
 <?php include_once 'includes/templates/header.php'?>
+
+<script language="JavaScript" src="js/registro.js">
+
+</script>
+
 <!--Formulario-->
 <section class="seccion contenedor" id="seccion-registro">
     <h2>Registro de usuarios</h2>
@@ -26,7 +31,7 @@
             <ul class="lista-precios clearfix">
                 <li>
                     <div class="tabla-precio">
-                        <h3>Pase por d&iacute;a (Viernes)</h3>
+                        <h3>Pase por Viernes</h3>
                         <p class="numero">$300</p>
                         <ul>
                             <li>Caracteristica 1</li>
@@ -35,14 +40,14 @@
                         </ul>
                         <div class="orden">
                             <label for="pase_dia">Boletos deseados:</label>
-                            <input type="number" min="0" id="pase_dia" size="3" name="boletos[]" placeholder="0">
+                            <input type="number" min="0" id="pase_viernes" size="3" name="boletos[]" placeholder="0" onchange="mostrarTalleresViernes()">
                         </div>
                     </div>
                 </li>
 
                 <li>
                     <div class="tabla-precio">
-                        <h3>Todos los d&iacute;as</h3>
+                        <h3>Pase por S&aacute;bado</h3>
                         <p class="numero">$500</p>
                         <ul>
                             <li>Caracteristica 1</li>
@@ -51,14 +56,14 @@
                         </ul>
                         <div class="orden">
                         <label for="pase_completo">Boletos deseados:</label>
-                        <input type="number" min="0" id="pase_completo" size="3" name="boletos[]" placeholder="0">
+                        <input type="number" min="0" id="pase_sabado" size="3" name="boletos[]" placeholder="0" onchange="mostrarTalleresSabado()">
                     </div>
                     </div>
                 </li>
 
                 <li>
                     <div class="tabla-precio">
-                        <h3>Pase por dos d&iacute;as(Viernes y S&aacute;bado)</h3>
+                        <h3>Pase por Domingo</h3>
                         <p class="numero">$400</p>
                         <ul>
                             <li>Caracteristica 1</li>
@@ -67,7 +72,7 @@
                         </ul>
                         <div class="orden">
                             <label for="pase_dos_dias">Boletos deseados:</label>
-                            <input type="number" min="0" id="pase_dos_dias" size="3" name="boletos[]" placeholder="0">
+                            <input type="number" min="0" id="pase_domingo" size="3" name="boletos[]" placeholder="0" onchange="mostrarTalleresDomingo()">
                         </div>
                     </div>
                 </li>
@@ -80,7 +85,7 @@
             <!--caja-->
             <div class="caja">
                 <!--#viernes-->
-                <div id="viernes" class="contenido-dia clearfix">
+                <div id="viernes" class="contenido-dia clearfix" style="display: none">
                     <h4>Viernes</h4>
                     <div>
                         <p>Talleres:</p>
@@ -103,7 +108,7 @@
                 </div>
                 <!--Viernes-->
                 <!--Sabado-->
-                <div id="sabado" class="contenido-dia clearfix">
+                <div id="sabado" class="contenido-dia clearfix" style="display: none">
                     <h4>Sábado</h4>
                     <div>
                         <p>Talleres:</p>
@@ -128,7 +133,7 @@
                 </div>
                 <!--sabado-->
                 <!--domingo-->
-                <div id="domingo" class="contenido-dia clearfix">
+                <div id="domingo" class="contenido-dia clearfix" style="display: none">
                     <h4>Domingo</h4>
                     <div>
                         <p>Talleres:</p>
@@ -177,7 +182,7 @@
                             <option value="3">Plumas</option>
                         </select>
                     </div>
-                    <input type="button" id="calcular" class="button" value="Calcular">
+                    <input type="button" id="calcular" class="button" value="Calcular" onclick="calcularMontos()">
                 </div>
                 <div class="total">
                     <p>Resumen:</p>
