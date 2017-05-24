@@ -124,3 +124,10 @@ form.login label{
   width: 80px;
   display: inline-block;
 }
+div.mensaje{
+  border: 3px solid green;
+  padding: 10px;
+}
+div.mensaje.error{
+  border: 3px solid red;
+}
