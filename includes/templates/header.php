@@ -14,7 +14,7 @@
     <meta name="viewport" content="width=device-width" />
     <meta charset="UTF-8">
 </head>
-<body onload="cambiarMenu()">
+<body>
 <div class="hero">
     <div class="contenido-header"><!--Barra redes sociales-->
         <nav class="redes-sociales">
