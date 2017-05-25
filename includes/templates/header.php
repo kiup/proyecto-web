@@ -31,5 +31,5 @@
             <p class="slogan">La mejor p&aacute;gina de <span>Conferencias</span></p>
         </div>
     </div>
-    <?php include_once 'includes/templates/header.php';?>
+    <?php include_once 'includes/templates/barra.php';?>
 </div>
