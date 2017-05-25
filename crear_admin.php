@@ -3,7 +3,7 @@ session_start();
 usuario_admin_autenticado();
 ?>
 
-<?php include_once 'includes/templates/header.php';?>
+<?php include_once 'includes/templates/barra.php';?>
 <header>
     <link href="css/admin.css" rel="stylesheet" type="text/css">
     <link href="css/registro.css" rel="stylesheet" type="text/css">
@@ -20,18 +20,32 @@ usuario_admin_autenticado();
         </div>
         <div class="campo">
             <label for="password"> Contrase&ntilde;a:</label>
-                <input type="password" id="password" name="password" placeholder="tu contrase&ntilde;a">
+                <input type="password" id="password" name="password" placeholder="tu contrase&ntilde;a" onblur="validatePress(this.value)">
 
         </div>
         <div class="campo">
                 <input type="submit" name="submit" class="button" value="Crear">
         </div>
     </form>
+    <script type="text/javascript">
+    <!--
+    function validatePass(value) {
+        var RegExPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])([A-Za-z\d$@$!%*?&]|[^ ]){8,15}$/;
+        var errorMessage = 'Password Incorrecta.';
+        if ((value.match(RegExPattern)) && (value!='')) {
+            alert('Password Correcta'); 
+        } else {
+            alert(errorMessage);
+            campo.focus();
+        } 
+    }
+    //-->
+    </script>
     <?php
     if(isset($_POST['submit'])){
         $usuario = $_POST['usuario'];
         $password = $_POST['password'];
-
+        
         if(strlen($usuario)<5){
             echo "El nombre de usuario debe ser más largo";
         }
