@@ -3,7 +3,7 @@
     usuario_admin_autenticado();
 ?>
 
-<?php include_once 'includes/templates/header.php';?>
+<?php include_once 'includes/templates/barra.php';?>
 
     <header>
         <link href="css/admin.css" rel="stylesheet" type="text/css">
