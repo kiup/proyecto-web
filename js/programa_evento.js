@@ -36,3 +36,4 @@ function cambiarMenu(menu) {
             break;
     }
 }
+window.onload = cambiarMenu;
