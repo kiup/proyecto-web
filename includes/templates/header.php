@@ -28,5 +28,5 @@
             <p class="slogan">La mejor p&aacute;gina de <span>Conferencias</span></p>
         </div>
     </div>
-    <?php include_once 'barra.php';?>
 </div>
+   <?php include_once 'barra.php';?>
