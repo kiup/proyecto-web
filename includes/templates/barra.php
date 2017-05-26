@@ -1,4 +1,4 @@
-
+<head><link href="css/main.css" rel="stylesheet" type="text/css"></head>
 <div class="barra">
     <div class="contenedor clearfix">
         <div class="logo">

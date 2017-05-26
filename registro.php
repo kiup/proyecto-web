@@ -1,4 +1,8 @@
-<?php include_once 'includes/templates/header.php'?>
+<header>
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+    <link href="css/registro.css" rel="stylesheet" type="text/css">
+</header>
+<?php include_once 'includes/templates/barra.php'?>
 
 <script language="JavaScript" src="js/registro.js">
 
@@ -193,8 +197,7 @@
                     <div id="suma_total" >
                     </div>
                     <p>Total:</p>
-                    <p id="total-pagar"></p>
-                    <input type="hidden" name="total_pedido" id="total_pedido" value="total_pedido">
+                    <input type="text" id="total-pedido">
                     <input id="btnRegistro" type="submit" name="submit" class="button" valor="Pagar">
                 </div>
             </div>

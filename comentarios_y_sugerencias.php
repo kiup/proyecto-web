@@ -1,4 +1,4 @@
-<?php include_once 'includes/templates/header.php' ?>
+<?php include_once 'includes/templates/barra.php' ?>
 
 <h2>Comentarios y Sugerencias</h2>
 <form name="comentarios" action="mail.php" method="post">

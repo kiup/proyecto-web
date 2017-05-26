@@ -79,7 +79,7 @@ function formatear_pedido($articulos) {
     return $pedido;
 }
 
-function eventos_json(&$eventos)
+function eventos_json($eventos)
 {
   $eventos_json = array();
   foreach ($eventos as $evento) {

@@ -4,7 +4,7 @@
     usuario_autenticado();
 ?>
 
-<?php include_once 'includes/templates/header.php'; ?>
+<?php include_once 'includes/templates/barra.php'; ?>
 <header>
         <link href="css/admin.css" rel="stylesheet" type="text/css">
         <link href="css/registro.css" rel="stylesheet" type="text/css">
@@ -32,8 +32,7 @@
             <?php
                 try{
                     require_once ('includes/funciones/db_conexion.php');
-                    $sql = "SELECT * FROM `registrados` INNER JOIN `regalos` ";
-                    $sql .= "ON registrados.regalo=regalos.ID_regalo";
+                    $sql = "SELECT * FROM registrados INNER JOIN regalos ON registrados.regalo = regalos.id_regalo";
                     $resultado = $conn->query($sql);
                     while($registrados = $resultado->fetch_assoc() ){ ?>
                         <tr>

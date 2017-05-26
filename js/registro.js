@@ -50,6 +50,6 @@ function calcularCostoTotal() {
         var totalPagar = (boletos_viernes * 300) +(boletos_sabado * 500) + (boletos_domingo * 400) +
             ((cantCamisas * 10) * .93) + (cantEtiquetas * 2);
 
-        document.getElementById('total-pagar').innerHTML = totalPagar;
+        document.getElementById('total-pedido').value = totalPagar;
     }
 }

@@ -4,11 +4,8 @@
     <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
     <link href="css/main.css" rel="stylesheet" type="text/css">
     <link href="css/testimoniales.css" rel="stylesheet" type="text/css">
-    <link href="css/registro.css" rel="stylesheet" type="text/css">
     <link href="css/newsletter.css" rel="stylesheet" type="text/css">
-    <link href="css/footer.css" rel="stylesheet" type="text/css">
     <link href="css/seccion-programa.css" rel="stylesheet" type="text/css">
-    <link href="css/calendario.css" rel="stylesheet" type="text/css">
     <script src="mapa.js"></script>
     <script type="text/javascript" src="js/programa_evento.js"></script>
     <meta name="viewport" content="width=device-width" />

@@ -1,4 +1,5 @@
-<?php include_once 'includes/templates/header.php'; ?>
+<header><link href="css/calendario.css" rel="stylesheet" type="text/css"></header>
+<?php include_once 'includes/templates/barra.php'; ?>
 
 <section class="seccion contenedor" id="seccion-calendario">
     <h2>Calendario de eventos</h2>

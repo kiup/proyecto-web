@@ -28,7 +28,7 @@ if(isset($_POST['submit'])){
 }
 ?>
 
-<?php include_once 'includes/templates/header.php';?>
+<?php include_once 'includes/templates/barra.php';?>
     <header>
         <link href="css/registro.css" rel="stylesheet" type="text/css">
     </header>

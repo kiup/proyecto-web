@@ -1,3 +1,4 @@
+<header><link href="css/footer.css" rel="stylesheet" type="text/css"></header>
 <!--FOOTER-->
 <footer class="site-footer">
     <div class="contenedor clearfix">
